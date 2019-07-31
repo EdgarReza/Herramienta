@@ -120,6 +120,8 @@ public class Tabla extends Application {
     final HBox pressback1= new HBox();
     final HBox alert= new HBox();
     final HBox alert1= new HBox();
+    final HBox changew= new HBox();
+    final HBox changew1= new HBox();
     
     //pantalla modificar cp
     final HBox modificar = new HBox();
@@ -1139,6 +1141,8 @@ public class Tabla extends Application {
 		                 pressback1.getChildren().clear();
 		                 alert.getChildren().clear(); 
 		                 alert1.getChildren().clear();
+		                 changew.getChildren().clear(); 
+		                 changew1.getChildren().clear();
 		                 
 		                 ObservableList<String> opciones = 
 			   			         FXCollections.observableArrayList(
@@ -1166,6 +1170,7 @@ public class Tabla extends Application {
 		   			       	        "SwipeWeb",
 		   			       	        "PressBackMobile",
 		   			       	        "Alert",
+		   			       	        "Switch",
 		   			       	        ""
 		   			        );
 
@@ -1192,6 +1197,7 @@ public class Tabla extends Application {
 				        		swipeweb.getChildren().clear();
 				        		pressback.getChildren().clear();
 				        		alert.getChildren().clear();
+				        		changew.getChildren().clear();
 				        		pe.getChildren().addAll(addLastName,types,agregar_datos);
 					   	        pe.setSpacing(3);
 					   	 
@@ -1230,6 +1236,7 @@ public class Tabla extends Application {
 				        		swipeweb.getChildren().clear();
 				        		pressback.getChildren().clear();
 				        		alert.getChildren().clear();
+				        		changew.getChildren().clear();
 				        		ps.getChildren().addAll(addLastName,types,valor,agregar_datos);
 					   	        ps.setSpacing(3);
 					   	        
@@ -1267,6 +1274,7 @@ public class Tabla extends Application {
                             	swipeweb.getChildren().clear();
                             	pressback.getChildren().clear();
                             	alert.getChildren().clear();
+                            	changew.getChildren().clear();
 				        		gu.getChildren().addAll(valor,agregar_datos);
 					   	        gu.setSpacing(3);
 					   	        
@@ -1303,6 +1311,7 @@ public class Tabla extends Application {
                               	swipeweb.getChildren().clear();
                               	pressback.getChildren().clear();
                               	alert.getChildren().clear();
+                              	changew.getChildren().clear();
   				        		wait.getChildren().addAll(valor,agregar_datos);
   					   	        wait.setSpacing(3);
   					   	        
@@ -1337,6 +1346,7 @@ public class Tabla extends Application {
                                 swipeweb.getChildren().clear();
                                 pressback.getChildren().clear();
                                 alert.getChildren().clear();
+                                changew.getChildren().clear();
     				        	photo.getChildren().addAll(valor,agregar_datos);
     					   	    photo.setSpacing(3);
     					   	        
@@ -1371,6 +1381,7 @@ public class Tabla extends Application {
                                 swipeweb.getChildren().clear();
                                 pressback.getChildren().clear();
                                 alert.getChildren().clear();
+                                changew.getChildren().clear();
       				        	gettext.getChildren().addAll(addLastName,types,valor,agregar_datos);
       					   	    gettext.setSpacing(3);
       					   	        
@@ -1407,6 +1418,7 @@ public class Tabla extends Application {
   				        		swipeweb.getChildren().clear();
   				        		pressback.getChildren().clear();
   				        		alert.getChildren().clear();
+  				        		changew.getChildren().clear();
   				        		dropdown.getChildren().addAll(addLastName,types,valor,agregar_datos);
   					   	        dropdown.setSpacing(3);
   					   	        
@@ -1444,6 +1456,7 @@ public class Tabla extends Application {
                                 swipeweb.getChildren().clear();
                                 pressback.getChildren().clear();
                                 alert.getChildren().clear();
+                                changew.getChildren().clear();
     				        	swipe.getChildren().addAll(agregar_datos);
     					   	    swipe.setSpacing(3);
     					   	    
@@ -1480,6 +1493,7 @@ public class Tabla extends Application {
                                  swipe.getChildren().clear();
                                  pressback.getChildren().clear();
                                  alert.getChildren().clear();
+                                 changew.getChildren().clear();
       				        	 swipeweb.getChildren().addAll(agregar_datos);
       					   	     swipeweb.setSpacing(3);
       					   	     
@@ -1514,6 +1528,7 @@ public class Tabla extends Application {
                                   dropdown.getChildren().clear();
                                   swipe.getChildren().clear();
                                   alert.getChildren().clear();
+                                  changew.getChildren().clear();
        				        	  pressback.getChildren().addAll(agregar_datos);
        					   	      pressback.setSpacing(3);
        					   	
@@ -1536,6 +1551,41 @@ public class Tabla extends Application {
        				        		
        				        	}
 				        	
+                              else if(seleccion=="Switch") {
+  				        		
+                                  gettext.getChildren().clear();  
+                                  photo.getChildren().clear(); 
+                                  wait.getChildren().clear();
+                                  gu.getChildren().clear();  
+                                  ps.getChildren().clear();
+                                  pe.getChildren().clear();
+                                  swipeweb.getChildren().clear();
+                                  dropdown.getChildren().clear();
+                                  swipe.getChildren().clear();
+                                  alert.getChildren().clear();
+                                  pressback.getChildren().clear();
+       				        	  changew.getChildren().addAll(agregar_datos);
+       					   	      changew.setSpacing(3);
+       					   	
+       					   	        
+       					             agregar_datos.setOnAction(new EventHandler<ActionEvent>() {
+       					             public void handle(ActionEvent e) {
+       					             	
+       					                 data.add(new Person(
+       					                         "Switch",
+       					                         addLastName.getText(),
+       					                         addEmail.getText(),
+       					                         valor.getText()));
+       					                 addFirstName.clear();
+       					                 addLastName.clear();
+       					                 addEmail.clear();
+       					                 valor.clear();   
+       					                 changew.getChildren().clear(); 
+       					             }
+       					         });
+       				        		
+       				        	}
+				        	
                               else if(seleccion=="Alert") {
   				        		
                                   gettext.getChildren().clear();  
@@ -1547,6 +1597,7 @@ public class Tabla extends Application {
                                   swipeweb.getChildren().clear();
                                   dropdown.getChildren().clear();
                                   swipe.getChildren().clear();
+                                  changew.getChildren().clear();
                                   pressback.getChildren().clear();
        				        	  alert.getChildren().addAll(agregar_datos);
        					   	      alert.setSpacing(3);
@@ -1585,6 +1636,7 @@ public class Tabla extends Application {
                                   dropdown.getChildren().clear();
                                   swipe.getChildren().clear();
                                   alert.getChildren().clear();
+                                  changew.getChildren().clear();
                                   pressback.getChildren().clear();
       					   	        
       					            agregar_datos.setOnAction(new EventHandler<ActionEvent>() {
@@ -1635,11 +1687,13 @@ public class Tabla extends Application {
 		   	        pressback1.setSpacing(3);
 		   	        alert1.getChildren().addAll(agregar,alert);
 		   	        alert1.setSpacing(3);
+		   	        changew1.getChildren().addAll(agregar,changew);
+		   	        changew1.setSpacing(3);
 		  
 		   			final VBox vbox1 = new VBox();
 		   	        vbox1.setSpacing(5);
 		   	        vbox1.setPadding(new Insets(10, 0, 0, 10));
-		   	        vbox1.getChildren().addAll(agrega_paso,pn,comb,gu1,wait1,photo1,gettext1,vacio1,dropdown1,swipe1,swipeweb1,pressback1,alert1);
+		   	        vbox1.getChildren().addAll(agrega_paso,pn,comb,gu1,wait1,photo1,gettext1,vacio1,dropdown1,swipe1,swipeweb1,pressback1,alert1,changew1);
 		   	        
 		   	      
 		   	        Stage secondStage = new Stage();
@@ -1687,6 +1741,8 @@ public class Tabla extends Application {
 	                 pressback1.getChildren().clear();
 	                 alert.getChildren().clear(); 
 	                 alert1.getChildren().clear();
+	                 changew.getChildren().clear(); 
+	                 changew1.getChildren().clear();
 	                 
 	                 ObservableList<String> opciones = 
 		   			         FXCollections.observableArrayList(
@@ -1714,6 +1770,7 @@ public class Tabla extends Application {
 	   			       	        "SwipeWeb",
 	   			       	        "PressBackMobile",
 	   			       	        "Alert",
+	   			       	        "Switch",
 	   			       	        ""
 	   			        );
 
@@ -1738,6 +1795,7 @@ public class Tabla extends Application {
 			        		swipeweb.getChildren().clear();
 			        		pressback.getChildren().clear();
 			        		alert.getChildren().clear();
+			        		changew.getChildren().clear();
 			        		pe.getChildren().addAll(addLastName,types,agregar_datos);
 				   	        pe.setSpacing(3);
 				   	        
@@ -1774,6 +1832,7 @@ public class Tabla extends Application {
 			        		swipeweb.getChildren().clear();
 			        		pressback.getChildren().clear();
 			        		alert.getChildren().clear();
+			        		changew.getChildren().clear();
 			        		ps.getChildren().addAll(addLastName,types,valor,agregar_datos);
 				   	        ps.setSpacing(3);
 				   	        
@@ -1809,6 +1868,7 @@ public class Tabla extends Application {
                        	swipe.getChildren().clear();
                        	swipeweb.getChildren().clear();
                        	pressback.getChildren().clear();
+                       	changew.getChildren().clear();
                        	alert.getChildren().clear();
 			        		gu.getChildren().addAll(valor,agregar_datos);
 				   	        gu.setSpacing(3);
@@ -1843,6 +1903,7 @@ public class Tabla extends Application {
                         swipe.getChildren().clear();
                         swipeweb.getChildren().clear();
                         pressback.getChildren().clear();
+                        changew.getChildren().clear();
                         alert.getChildren().clear();
 				        		wait.getChildren().addAll(valor,agregar_datos);
 					   	        wait.setSpacing(3);
@@ -1877,6 +1938,7 @@ public class Tabla extends Application {
                         swipe.getChildren().clear();
                         swipeweb.getChildren().clear();
                         pressback.getChildren().clear();
+                        changew.getChildren().clear();
                         alert.getChildren().clear();
 				        	photo.getChildren().addAll(valor,agregar_datos);
 					   	    photo.setSpacing(3);
@@ -1912,6 +1974,7 @@ public class Tabla extends Application {
                            swipeweb.getChildren().clear();	
                            pressback.getChildren().clear();
                            alert.getChildren().clear();
+                           changew.getChildren().clear();
  				           gettext.getChildren().addAll(addLastName,types,valor,agregar_datos);
  					   	   gettext.setSpacing(3);
  					   	        
@@ -1948,6 +2011,7 @@ public class Tabla extends Application {
 				        		swipeweb.getChildren().clear();
 				        		pressback.getChildren().clear();
 				        		alert.getChildren().clear();
+				        		changew.getChildren().clear();
 				        		dropdown.getChildren().addAll(addLastName,types,valor,agregar_datos);
 					   	        dropdown.setSpacing(3);
 					   	        
@@ -1985,6 +2049,7 @@ public class Tabla extends Application {
                                 swipeweb.getChildren().clear();
                                 pressback.getChildren().clear();
                                 alert.getChildren().clear();
+                                changew.getChildren().clear();
      				        	swipe.getChildren().addAll(agregar_datos);
      					   	    swipe.setSpacing(3);
      					   	        
@@ -2019,6 +2084,7 @@ public class Tabla extends Application {
                             swipe.getChildren().clear();
                             pressback.getChildren().clear();
                             alert.getChildren().clear();
+                            changew.getChildren().clear();
   				        	swipeweb.getChildren().addAll(agregar_datos);
   					   	    swipeweb.setSpacing(3);
   					   	        
@@ -2053,6 +2119,7 @@ public class Tabla extends Application {
                              swipe.getChildren().clear();
                              swipeweb.getChildren().clear();
                              alert.getChildren().clear();
+                             changew.getChildren().clear();
    				        	pressback.getChildren().addAll(agregar_datos);
    					   	    pressback.setSpacing(3);
    					   	    
@@ -2089,6 +2156,7 @@ public class Tabla extends Application {
                               swipe.getChildren().clear();
                               swipeweb.getChildren().clear();
                               pressback.getChildren().clear();
+                              changew.getChildren().clear();
     				          alert.getChildren().addAll(agregar_datos);
     					   	  alert.setSpacing(3);
     					   	    
@@ -2113,6 +2181,43 @@ public class Tabla extends Application {
     				        		
     				        	}
 			        	
+                         else if(seleccion=="Switch") {
+    				        	
+                           	gettext.getChildren().clear(); 
+                           	wait.getChildren().clear(); 
+                             	gu.getChildren().clear();  
+                              ps.getChildren().clear();
+                              pe.getChildren().clear();
+                              photo.getChildren().clear();
+                              dropdown.getChildren().clear();
+                              swipe.getChildren().clear();
+                              swipeweb.getChildren().clear();
+                              alert.getChildren().clear();
+                              
+    				        	changew.getChildren().addAll(agregar_datos);
+    					   	    changew.setSpacing(3);
+    					   	    
+
+    					   	        
+    					   	        
+    					            agregar_datos.setOnAction(new EventHandler<ActionEvent>() {
+    					             public void handle(ActionEvent e) {
+    					             	
+    					                 data.add(new Person(
+    					                         "Switch",
+    					                         addLastName.getText(),
+    					                         addEmail.getText(),
+    					                         valor.getText()));
+    					                 addFirstName.clear();
+    					                 addLastName.clear();
+    					                 addEmail.clear();
+    					                 valor.clear();   
+    					                 pressback.getChildren().clear(); 
+    					             }
+    					         });
+    				        		
+    				        	}
+			        	
 			        	
 
                          else if(seleccion=="") {
@@ -2127,6 +2232,7 @@ public class Tabla extends Application {
                            pressback.getChildren().clear();
                            swipe.getChildren().clear();
                            alert.getChildren().clear();
+                           changew.getChildren().clear();
                            swipeweb.getChildren().clear();
  					   	        
  					   	        
@@ -2178,6 +2284,8 @@ public class Tabla extends Application {
 	   	        pressback1.setSpacing(3);
 	   	        alert1.getChildren().addAll(agregar,alert);
 	   	        alert1.setSpacing(3);
+	   	        changew1.getChildren().addAll(agregar,changew);
+	   	        changew1.setSpacing(3);
 		        	
 		        	
 		        	
@@ -2187,7 +2295,7 @@ public class Tabla extends Application {
 		        	final VBox vbox1 = new VBox();
 		   	        vbox1.setSpacing(5);
 		   	        vbox1.setPadding(new Insets(10, 0, 0, 10));
-		   	        vbox1.getChildren().addAll(modifica_paso,pn,comb,gu1,wait1,photo1,gettext1,vacio1,dropdown1,swipe1,swipeweb1,pressback1,alert1,modificar);
+		   	        vbox1.getChildren().addAll(modifica_paso,pn,comb,gu1,wait1,photo1,gettext1,vacio1,dropdown1,swipe1,swipeweb1,pressback1,alert1,changew1,modificar);
 		   	        
 		        	Stage thirdStage = new Stage();
 		   	        thirdStage.setTitle("Automation Tool");

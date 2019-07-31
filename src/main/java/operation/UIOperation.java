@@ -21,6 +21,7 @@ import io.appium.java_client.TouchAction;
 
 public class UIOperation {
     WebDriver driver;
+    String winHandleBefore;
     public UIOperation(WebDriver driver){
         this.driver = driver;
     }
@@ -39,6 +40,7 @@ public class UIOperation {
         case "GOTOURL":
             //Get url of application
             driver.get(p.getProperty(value));
+            winHandleBefore = driver.getWindowHandle();
             break;
             
         case "DROPDOWN":
@@ -54,12 +56,18 @@ public class UIOperation {
             break;
             
         case "SWIPEWEB":
-             ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
+             ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,1000)");
           	break;
             
         case "PHOTO":
         	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
            	FileUtils.copyFile(scrFile, new File("c:\\evidencias\\"+value+".png"));
+        	break;
+        	
+        case "SWITCH":
+        	for(String winHandle : driver.getWindowHandles()){
+        	    driver.switchTo().window(winHandle);
+        	}
         	break;
             
         case "COMPARETEXT":
