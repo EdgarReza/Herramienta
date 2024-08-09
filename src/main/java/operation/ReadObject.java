@@ -1,5 +1,4 @@
 package operation;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,7 +9,7 @@ public class ReadObject {
     public Properties getObjectRepository() throws IOException{
         //Read object repository file
     	
-        InputStream stream = new FileInputStream("C:\\Automatizacion\\object.properties");
+        InputStream stream = new FileInputStream("/Users/edgar.reza.sanchez/Desarrollos/automatizacion/object.properties");
         //load all objects
         p.load(stream);
          return p;

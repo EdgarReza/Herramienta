@@ -1,6 +1,5 @@
 package operation;
 
-import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.time.Duration;
@@ -12,7 +11,6 @@ import org.openqa.selenium.*;
 //import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;

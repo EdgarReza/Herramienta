@@ -28,7 +28,7 @@ public class Base {
     public Connection connect() throws SQLException {
         // SQLite connection string
         //String url = "jdbc:sqlite:"+Base.class.getResource("/BD/casos.db");
-        String url = "jdbc:sqlite:"+"C://Sqlite//casos.db";
+        String url = "jdbc:sqlite:"+"/Users/edgar.reza.sanchez/Desarrollos/casos.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);

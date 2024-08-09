@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 import java.util.ArrayList;
 import io.appium.java_client.android.AndroidDriver;
 import javafx.application.Application;
@@ -104,7 +103,7 @@ public class Tabla extends Application {
     @Override
     public void start(Stage stage) {
         Scene scene = new Scene(new Group());
-        stage.setTitle("Automatización I+D");
+        stage.setTitle("Automatizaciï¿½n I+D");
         stage.setWidth(1070);
         stage.setHeight(731);
         Objetos app=new Objetos();
@@ -123,7 +122,7 @@ public class Tabla extends Application {
         tableEstatus.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         
             
-        final Label label = new Label("Herramienta de Automatización");
+        final Label label = new Label("Herramienta de Automatizaciï¿½n");
         label.setFont(new Font("Arial", 20));
         
         TextField casoprueba = new TextField();
@@ -180,7 +179,7 @@ public class Tabla extends Application {
         
         
  
-        TableColumn firstNameCol = new TableColumn("Acción");
+        TableColumn firstNameCol = new TableColumn("Acciï¿½n");
         firstNameCol.setMinWidth(130);
         firstNameCol.setCellValueFactory(
             new PropertyValueFactory<Person, String>("firstName"));
@@ -246,7 +245,7 @@ public class Tabla extends Application {
         table.getColumns().addAll(firstNameCol, lastNameCol, emailCol,value);
  
         final TextField addFirstName = new TextField();
-        addFirstName.setPromptText("Acción");
+        addFirstName.setPromptText("Acciï¿½n");
         addFirstName.setMaxWidth(firstNameCol.getPrefWidth());
         final TextField addLastName = new TextField();
         addLastName.setMaxWidth(lastNameCol.getPrefWidth());

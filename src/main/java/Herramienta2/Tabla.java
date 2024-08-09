@@ -19,7 +19,6 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.annotations.Test;
 import java.util.ArrayList;
 import io.appium.java_client.android.AndroidDriver;
 import javafx.application.Application;
@@ -859,7 +858,7 @@ public class Tabla extends Application {
 	            	if(tipo_browser_suite==null) {
 	                	
 	                	Alert alerta = new Alert(AlertType.ERROR);
-	                	alerta.setTitle("Automatización");
+	                	alerta.setTitle("Automatizaciï¿½n");
 	                	alerta.setHeaderText("Selecciona un dispositivo");
 	                	alerta.showAndWait();
 	                	

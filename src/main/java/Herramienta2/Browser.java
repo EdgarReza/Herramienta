@@ -27,7 +27,7 @@ public class Browser {
 		 switch (browser)
 	        {
 	            case "Chrome":
-	            	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\"+"src"+"\\"+"main"+"\\"+"java"+"\\"+"drivers"+"\\"+"chromedriver.exe");
+	            	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/"+"src"+"/"+"main"+"/"+"java"+"/"+"drivers"+"/"+"chromedriver");
 	            	webDriver=new ChromeDriver();
 	            	webDriver.manage().window().maximize();
 	                 break;
@@ -62,14 +62,14 @@ public class Browser {
 		 port1= port.findFreePort();
 		
 				
-		System.out.println("Iniciando sesión de Appium"); 
+		System.out.println("Iniciando sesiï¿½n de Appium"); 
 		  builder = new AppiumServiceBuilder();
 		  builder.usingPort(port1);
 		  builder.withIPAddress("127.0.0.1");
 		  service = AppiumDriverLocalService.buildService(builder);
 		  service.start();
 		  if (service.isRunning()) {
-		   System.out.println("Sesión iniciada");
+		   System.out.println("Sesion iniciada");
 		  }
 		  System.out.println("cuanto vale driver"+driver);
 		
